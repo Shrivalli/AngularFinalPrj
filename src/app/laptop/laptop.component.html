@@ -1,0 +1,18 @@
+<p>laptop works!</p>
+<div>
+
+<ul *ngFor="let i of Laptops">
+    <li>Laptop ID:{{i.LID}}</li>
+    <li>Brand:{{i.Brand}}</li>
+    <li *ngIf=i.expensive>Model: {{i.Model}}</li>
+    <li>Price:{{i.Price}}</li>
+    <li>Hardware ID:{{i.Hware.HID}}</li>
+    <li>Hardware Capacity:{{i.Hware.Capacity}}</li>
+    <ul *ngFor="let r of i.rams">
+                <li>Ram ID:{{r.RID}}</li>
+                <li>Ram Description:{{r.RDesc}}</li>
+                        
+    </ul>
+    <a [routerLink]="['/ViewLaptop',i.LID]">View Laptop Details</a>
+</ul>
+</div>

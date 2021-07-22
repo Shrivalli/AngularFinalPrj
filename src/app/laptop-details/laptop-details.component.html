@@ -1,0 +1,15 @@
+<p>laptop-details works!</p>
+<div>
+    <ul>
+        <li>{{LapDet.LID}}</li>
+        <li>Brand:{{LapDet.Brand}}</li>
+    <li *ngIf=LapDet.expensive>Model: {{LapDet.Model}}</li>
+    <li>Price:{{LapDet.Price}}</li>
+    <li>Hardware ID:{{LapDet.Hware.HID}}</li>
+    <li>Hardware Capacity:{{LapDet.Hware.Capacity}}</li>
+    <ul *ngFor="let r of LapDet.rams">
+                <li>Ram ID:{{r.RID}}</li>
+                <li>Ram Description:{{r.RDesc}}</li>
+    </ul>
+    </ul>
+</div>

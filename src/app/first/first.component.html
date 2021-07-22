@@ -1,0 +1,14 @@
+<p>first works!</p>
+First Number: <input type="number" [(ngModel)]="x"/><br/>
+Second Number: <input type="number" [(ngModel)]="y"/><br/>
+<button type="submit" [disabled]="res" (click)="Addnumber(x,y)">Add Numbers</button><br/> 
+
+<hr/>
+<p> Result:{{result}}</p>
+
+First Name: <input type="text" #fir id="fir"/>
+Second Name: <input type="text" #sec id="sec"/>
+
+<button type="submit" (click)="Addtext(fir.value,sec.value)"> FullName: </button>
+<hr/>
+<p>FullName: {{fullname}}</p>
